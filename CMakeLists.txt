@@ -9,8 +9,10 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 # or if it is added as a dependency (through add_subdirectory for example).
 if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
   set(RAYLIB_IS_MAIN TRUE)
+  message("[INFO] raylib is compiled as main")
 else()
   set(RAYLIB_IS_MAIN FALSE)
+  message("[INFO] raylib is compiled as library")
 endif()
 
 # Sets compiler flags and language standard
